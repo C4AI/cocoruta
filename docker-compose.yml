@@ -1,0 +1,30 @@
+services:
+  cocoruta_ui:
+    image: cocoruta_ui:latest
+    ports:
+      - 3000:3000
+    environment:
+      - 'OPENAI_API_KEY=xyz' # dummy, not needed
+      - 'OPENAI_API_HOST=http://127.0.0.1:8080'
+      - 'OPENAI_API_HOST_RAG=http://0.0.0.0:8099'
+
+
+# docker run --gpus all --rm --shm-size 1g -p:8080:80 -e HUGGING_FACE_HUB_TOKEN=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 -v "workspace\data:/data ghcr.io/huggingface/text-generation-inference:latest --model-id felipeoes/cocoruta-7b
+
+  cocoruta_api:
+    image: ghcr.io/huggingface/text-generation-inference:latest
+    ports:
+      - 8080:80
+    environment:
+      - HUGGING_FACE_HUB_TOKEN=${HUGGINGFACE_TOKEN}
+      - MODEL_ID=felipeoes/cocoruta-7b
+    volumes:
+      - './workspace/data:/data'
+    # deploy: # uncomment to use GPU
+      # resources:
+      #   reservations:
+      #     devices:
+      #       - driver: nvidia
+      #         count: 1
+      #         capabilities: [gpu]
+             
