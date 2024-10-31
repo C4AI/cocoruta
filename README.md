@@ -61,16 +61,21 @@ If you use Cocoruta in your research, please cite the following paper:
 
 ```bibtex
 *@inproceedings{2024cocoruta,
-  title={Legal Document-Based, Domain-Driven Q\&A System: LLMs in Perspective},
-  author={Espírito Santo, F. O. and Peres, S. M. and Gramacho, G. S. and Brandão, A. A. F. and Cozman, F. G.},
-  booktitle={International Joint Conference on Neural Networks (IJCNN 2024)},
+  author={do Espírito Santo, Felipe Oliveira and Marques Peres, Sarajane and de Sousa Gramacho, Givanildo and Alves Franco Brandão, Anarosa and Cozman, Fabio Gagliardi},
+  booktitle={2024 International Joint Conference on Neural Networks (IJCNN)}, 
+  title={Legal Document-Based, Domain-Driven Q&A System: LLMs in Perspective}, 
   year={2024},
-  pages={1--9},
+  volume={},
+  number={},
+  pages={1-9},
+  keywords={Law;Large language models;Neural networks;Question answering (information retrieval);Complexity theory;Large language models;LLM evaluation;legal Q&A systems;legal-document corpus},
   address={Yokohama, Japan},
-  isbn={978-8-3503-5931-2}
+  isbn={978-8-3503-5931-2},
+  doi={10.1109/IJCNN60899.2024.10650895},
+  url={https://ieeexplore.ieee.org/abstract/document/10650895}
 }
 ```
 
 ### External Links
-- [Cocoruta Paper](https://achar-link-dps.com)
+- [Cocoruta Paper](https://ieeexplore.ieee.org/abstract/document/10650895)
 - [KEML Website](https://sites.usp.br/keml)
