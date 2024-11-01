@@ -1,0 +1,39 @@
+networks:
+  cocoruta_net:
+    driver: bridge
+
+services:
+  cocoruta_api:
+    image: ghcr.io/huggingface/text-generation-inference:latest
+    ports:
+      - 8080:80
+    environment:
+      - MODEL_ID=felipeoes/cocoruta-7b
+      - DTYPE=bfloat16
+    volumes:
+      - './workspace/data:/data'
+    deploy: # comment this block to use CPU
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    networks:
+      - cocoruta_net
+
+  cocoruta_ui:
+    build: ./chatbot-ui/
+    ports:
+      - 3000:3000
+    environment:
+      - OPENAI_API_KEY=xyz # dummy, not needed
+      - OPENAI_API_HOST=http://cocoruta_api
+      - OPENAI_API_HOST_RAG=http://cocoruta_api:8099
+    networks:
+      - cocoruta_net
+    depends_on:
+      - cocoruta_api
+
+            
+ 
