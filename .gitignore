@@ -164,8 +164,7 @@ cython_debug/
 # PROJECT-RELATED
 test.ipynb
 test.py
-data/
-
+workspace/
 
 # dependencies
 /node_modules

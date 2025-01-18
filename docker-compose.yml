@@ -12,13 +12,13 @@ services:
       - DTYPE=bfloat16
     volumes:
       - './workspace/data:/data'
-    deploy: # comment this block to use CPU
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    # deploy: # comment this block to use CPU
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
     networks:
       - cocoruta_net
 
