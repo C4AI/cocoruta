@@ -68,6 +68,11 @@ If you use Cocoruta in your research, please cite the following paper:
 }
 ```
 
+### Resources
+- [Cocoruta Model Card](https://huggingface.co/felipeoes/cocoruta-7b)
+- [Cocoruta Training and Evaluation Data](https://huggingface.co/datasets/felipeoes/cocoruta-evaluation)
+
+
 ### External Links
 - [Cocoruta Paper](https://ieeexplore.ieee.org/abstract/document/10650895)
 - [KEML Website](https://sites.usp.br/keml)
